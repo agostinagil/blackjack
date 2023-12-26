@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Blackjack</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Blackjack</h1>
+      <ul class="header-ul">
+        <li><a href="#rules"> Rules of Blackjack </a></li>
+        <li><a href="#game">Let's play!</a></li>
+      </ul>
+    </header>
+
+    <section id="game">
+      <button class="letsPlay" id="playBtn">LET'S PLAY</button>
+      <div class="boardGame">
+        <div class="dealer">
+          <h3>Dealer:</h3>
+          <div class="dealerCards"></div>
+        </div>
+        <div class="player">
+          <h3 class="yourCards">You:</h3>
+          <div class="buttons"></div>
+          <div class="playerCards"></div>
+        </div>
+      </div>
+      <div class="game-buttons">
+        <button class="hit" disabled>Hit</button>
+        <button class="stand" disabled>Stand</button>
+        <button class="hidden" id="resetBtn">New game</button>
+      </div>
+      <p id="results"></p>
+    </section>
+    <section id="rules" class="rules">
+      <h2>Here find you the Blackjack's rules</h2>
+      <article>
+        <h4 id="objectives">Objectives of the game</h4>
+        <p>
+          The objective of blackjack is simple: each player faces the dealer
+          individually, aiming to
+          <b
+            >achieve 21 points or the closest possible number without exceeding
+            it</b
+          >. To attain this, each player receives two cards at the beginning.
+        </p>
+        <p>
+          <b
+            >If the initial two cards add up to 21, it's the best possible play
+            and is called Blackjack</b
+          >.When players don't reach 21, they can request additional cards to
+          get closer, but if they exceed 21, they automatically lose.
+        </p>
+        <p>
+          The dealer, who is also part of the game, follows specific house rules
+          in blackjack. They receive two cards, and their options are
+          straightforward:
+        </p>
+        <ul>
+          <li>
+            If they have
+            <b>16 or less, they are obligated to request another card</b>.
+          </li>
+          <li>If they have <b> 17 or more, they must stand</b>.</li>
+        </ul>
+        <p>
+          <b>The dealer beats all players who exceed 21</b> and those with a
+          hand of lesser value than theirs. For instance, if the dealer has 19
+          points, they win against all players with 18 or less and 22 or more
+        </p>
+        <p>
+          <b>They lose to players with a higher hand</b> and to those who have
+          stood if the dealer exceeds 21 points. A tie in blackjack occurs
+          between the dealer and players with the same point total.
+        </p>
+      </article>
+
+      <article>
+        <h4 id="values">Card values in Blackjack</h4>
+        <p>
+          In blackjack, cards have their own values. If we want to play better
+          each time and reach our 21 points, we must know by heart the value
+          assigned to each card in the deck.
+        </p>
+        <p>The value of the cards in blackjack are as follows:</p>
+        <ul>
+          <li>
+            <b>The Ace is the only card with two values, 1 and 11</b>. The
+            player with the Ace can choose its value as needed.
+          </li>
+          <li>
+            <b
+              >Cards form 1 to 10 are valued according to ther numerical
+              order.</b
+            >
+          </li>
+          <li><b>The Jack, Queen, and King share a value of 10 points.</b></li>
+        </ul>
+        <p>
+          Now you now, as every good blackjack 21 player should, that in a deck
+          of 52 cards,there are 16 cards worth 10 points.
+        </p>
+      </article>
+
+      <article>
+        <h4 id="turns">How to play Blackjack: truns and mechanics</h4>
+        <h5>Table and dealer</h5>
+        <p>
+          Blackjack is played on a semicircular or half-moon-shaped table. The
+          dealer is located on the straight side of the table, while the players
+          are on the curved side. The dealer oversees the game, signals the
+          moments, deals and collects cards, and manages the payout bets. They
+          are also responsible for playing on behalf of the bank.
+        </p>
+        <h5>Betting Round</h5>
+        <p>
+          <b>The first step in blackjack is the betting round</b>. Each player
+          seated at the table places their bet in their playing area, and there
+          is a predeterminated minimum and maximum limit for each bet. The
+          dealer, representign the bank, does not bet and plays against each
+          player for the same amount they have wagered.
+        </p>
+        <h5>Dealing of cards</h5>
+        <p>
+          Once the bets are placed, the blackjack hands begins.
+          <b
+            >The dealer deals two cards to each participant, staarting with the
+            player to their left and proceeiding clockwise, one card at the
+            time</b
+          >. Are these cards are face-up, revealing their value, except for one
+          of the dealer's cards, of which only one is visible.
+        </p>
+        <p>
+          If the dealer's face-up card is an Ace, it gives players the option to
+          insure. This allows participants to bet that the dealer will have
+          Blackjack, potentially recovering a portion of their original bet.
+          Why? Because
+          <b
+            >there are 16 cards worth 10 points, increasing the likelihood of
+            Blackjack considerably with an Ace</b
+          >, which can be valued at 1 or 11.
+        </p>
+        <h5>Blackjack Turns</h5>
+        <p>
+          Once the cards are dealt, the player to the left of the dealer begins
+          and has several possible options in their quest to win the blackjack
+          game:
+        </p>
+        <ul>
+          <li>
+            <b>Split</b>: if the cards have the same value, the player can split
+            them to have two hands. A seccond hand will be added to each split
+            card, but in this version of blackjack, it means the player can no
+            longer request additional cards.
+          </li>
+          <li>
+            <b>Hit</b>: to achieve blackjack or get as close as possible, the
+            player can request as many cards they want. If they go over 21,
+            their cards will be removed, and the bet is fortfeited.
+          </li>
+          <li>
+            <b>Stand</b>: whether after receiving the first two cards or after
+            hitting, the blackjack player has the option to stand and wait for
+            the end of the round.
+          </li>
+          <li>
+            <b>Double Down</b>: this option allows the player to double the
+            original bet in exchange for receiving one more card. Afterward,
+            their turn is closed, awaitin the round's conclusion.
+          </li>
+          <li>
+            <b>Dealer's turn</b>: when the players' rounds end, the dealer wins
+            if there are no active players left. If there are remaining bets,
+            the dealer must reveal their cards. If they have 16 or less, they
+            are required to request another card. If they have 17 or more, they
+            are obligated to stand.
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <h4 id="prizes">Prize destribution</h4>
+        <p>
+          When the dealer's hand concludes, the prizes are distributed. Each
+          hand that beats the dealer's is paid 1 to 1, meaning the player
+          receives the same amount they bet. If it's a Blackjack, the payout is
+          3 to 2. If a Blackjack is achieved after doubling down, the payout is
+          1 to 1.
+        </p>
+        <p>
+          In cases where there are insured players, if the dealer ends up with
+          Blackjack, they will pay 2 to 1 to the insured players. After the
+          prize distribution, the hand is considered concluded, and a new
+          betting round begins.
+        </p>
+      </article>
+    </section>
+    <footer class="footer">
+      <p>Agostina Gil</p>
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
+</html>
